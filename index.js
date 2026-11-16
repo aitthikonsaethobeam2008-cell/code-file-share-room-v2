@@ -167,7 +167,7 @@ app.get('/api/rooms/:code/download/:id', (req, res) => {
 
 // ---------- pages ----------
 const page = (req, res) => { res.set('X-Robots-Tag', 'noindex, nofollow'); res.sendFile(path.join(__dirname, '..', 'public', 'index.html')); };
-['/', '/new/code', '/new/file', '/share/:id', '/file/:id', '/room/:code'].forEach(p => app.get(p, page));
+['/new/code', '/new/file', '/share/:id', '/file/:id', '/room/:code'].forEach(p => app.get(p, page));
 
 app.use('/api', (req, res) => res.status(404).json({ error: 'ไม่พบ API นี้' }));
 app.use((err, req, res, next) => {
