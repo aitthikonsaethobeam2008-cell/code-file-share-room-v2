@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1033"/>
+      <stop offset=".45" stop-color="#2b2468"/>
+      <stop offset=".72" stop-color="#8a3f8f"/>
+      <stop offset=".9" stop-color="#f08a7a"/>
+      <stop offset="1" stop-color="#ffc58a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff3d6" stop-opacity=".95"/>
+      <stop offset=".35" stop-color="#ffd2a1" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#ff9a8a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a9a"/><stop offset="1" stop-color="#a05a98"/></linearGradient>
+    <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d2f7a"/><stop offset="1" stop-color="#5a3a86"/></linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c1f4d"/><stop offset="1" stop-color="#2a2160"/></linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3a58c" stop-opacity=".85"/><stop offset="1" stop-color="#3a2a73" stop-opacity=".9"/></linearGradient>
+    <g id="pine"><path d="M0-90 L22-45 H9 L30-5 H12 L36 40 H-36 L-12-5 H-30 L-9-45 H-22Z"/><rect x="-5" y="40" width="10" height="16"/></g>
+    <g id="cloud"><ellipse cx="60" cy="30" rx="60" ry="16"/><ellipse cx="45" cy="20" rx="30" ry="16"/><ellipse cx="85" cy="18" rx="26" ry="14"/></g>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g fill="#fff">
+    <circle cx="120" cy="90" r="1.8"/><circle cx="260" cy="170" r="1.2"/><circle cx="400" cy="60" r="1.6"/><circle cx="530" cy="140" r="1"/>
+    <circle cx="660" cy="80" r="1.8"/><circle cx="790" cy="200" r="1.2"/><circle cx="930" cy="50" r="1.5"/><circle cx="1080" cy="130" r="1.8"/>
+    <circle cx="1220" cy="70" r="1.2"/><circle cx="1350" cy="190" r="1.6"/><circle cx="1480" cy="100" r="1.8"/><circle cx="1550" cy="230" r="1"/>
+    <circle cx="190" cy="260" r="1"/><circle cx="470" cy="290" r="1.4"/><circle cx="1010" cy="280" r="1"/><circle cx="1280" cy="300" r="1.3"/>
+    <circle cx="70" cy="330" r="1.2"/><circle cx="740" cy="330" r="1"/><circle cx="1430" cy="350" r="1.2"/>
+  </g>
+
+  <!-- big moon / sun -->
+  <circle cx="1130" cy="470" r="260" fill="url(#glow)"/>
+  <circle cx="1130" cy="470" r="92" fill="#fff0d2"/>
+  <circle cx="1105" cy="450" r="14" fill="#f6d9b0" opacity=".6"/><circle cx="1155" cy="495" r="20" fill="#f6d9b0" opacity=".5"/><circle cx="1150" cy="440" r="8" fill="#f6d9b0" opacity=".6"/>
+
+  <!-- clouds -->
+  <g fill="#ffd9c8" opacity=".5"><use href="#cloud" transform="translate(180 420) scale(1.6)"/><use href="#cloud" transform="translate(620 360) scale(1.1)"/><use href="#cloud" transform="translate(1320 330) scale(1.4)"/></g>
+  <g fill="#fff" opacity=".18"><use href="#cloud" transform="translate(420 230) scale(1.8)"/><use href="#cloud" transform="translate(1000 170) scale(1.3)"/></g>
+
+  <!-- far mountains -->
+  <path fill="url(#far)" d="M0 640 L110 560 L210 610 L350 480 L480 600 L600 540 L720 620 L860 500 L990 610 L1120 560 L1250 620 L1400 510 L1520 590 L1600 550 V760 H0Z"/>
+  <!-- snow caps -->
+  <g fill="#ffe9e0" opacity=".7"><path d="M350 480 L318 524 L340 514 L352 530 L366 512 L384 524Z"/><path d="M860 500 L826 548 L848 538 L862 554 L878 536 L896 548Z"/><path d="M1400 510 L1368 552 L1390 543 L1402 558 L1418 541 L1436 552Z"/></g>
+
+  <!-- mid mountains -->
+  <path fill="url(#mid)" d="M0 700 L140 620 L260 680 L400 590 L540 690 L700 630 L840 700 L980 640 L1120 710 L1260 650 L1400 700 L1520 640 L1600 690 V800 H0Z"/>
+
+  <!-- lake -->
+  <rect y="720" width="1600" height="180" fill="url(#lake)"/>
+  <g fill="#fff0d2" opacity=".5"><rect x="1070" y="730" width="120" height="4" rx="2"/><rect x="1090" y="748" width="80" height="4" rx="2"/><rect x="1060" y="768" width="140" height="4" rx="2"/><rect x="1100" y="790" width="60" height="4" rx="2"/><rect x="1080" y="815" width="100" height="4" rx="2"/></g>
+
+  <!-- near hills + pines -->
+  <path fill="url(#near)" d="M0 760 C200 700 340 740 520 750 C700 760 820 720 1000 760 C1200 800 1400 740 1600 770 V900 H0Z"/>
+  <g fill="#14153a">
+    <use href="#pine" transform="translate(70 760) scale(1.3)"/><use href="#pine" transform="translate(150 780) scale(.9)"/><use href="#pine" transform="translate(230 770) scale(1.6)"/>
+    <use href="#pine" transform="translate(330 790) scale(.8)"/><use href="#pine" transform="translate(1330 790) scale(1)"/><use href="#pine" transform="translate(1420 770) scale(1.7)"/>
+    <use href="#pine" transform="translate(1510 785) scale(1.2)"/><use href="#pine" transform="translate(1575 770) scale(1.5)"/>
+  </g>
+  <path fill="#0f1030" d="M0 840 C260 800 520 850 820 830 C1120 810 1380 850 1600 825 V900 H0Z"/>
+</svg>

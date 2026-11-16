@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220">
+  <defs>
+    <radialGradient id="b" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d9e4ff"/></radialGradient>
+  </defs>
+  <ellipse cx="120" cy="208" rx="62" ry="8" fill="#000" opacity=".22"/>
+  <!-- cat-ears -->
+  <path d="M58 70 L66 18 L106 52Z" fill="#fff" stroke="#b9c9f5" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M182 70 L174 18 L134 52Z" fill="#fff" stroke="#b9c9f5" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M68 50 L70 32 L86 46Z" fill="#ffb7c9"/><path d="M172 50 L170 32 L154 46Z" fill="#ffb7c9"/>
+  <!-- fluffy cloud body -->
+  <g fill="url(#b)" stroke="#b9c9f5" stroke-width="3">
+    <circle cx="70" cy="140" r="42"/><circle cx="170" cy="140" r="42"/><circle cx="120" cy="110" r="68"/><circle cx="120" cy="156" r="48"/>
+  </g>
+  <g fill="url(#b)"><circle cx="70" cy="140" r="39"/><circle cx="170" cy="140" r="39"/><circle cx="120" cy="110" r="65"/><circle cx="120" cy="156" r="45"/></g>
+  <!-- face -->
+  <g fill="#2a2f5a"><ellipse cx="94" cy="118" rx="7" ry="10"/><ellipse cx="146" cy="118" rx="7" ry="10"/></g>
+  <g fill="#fff"><circle cx="96" cy="114" r="3"/><circle cx="148" cy="114" r="3"/></g>
+  <ellipse cx="78" cy="136" rx="11" ry="7" fill="#ff9fb8" opacity=".7"/><ellipse cx="162" cy="136" rx="11" ry="7" fill="#ff9fb8" opacity=".7"/>
+  <path d="M110 134 Q115 142 120 134 Q125 142 130 134" fill="none" stroke="#2a2f5a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- whiskers -->
+  <g stroke="#b9c9f5" stroke-width="2" stroke-linecap="round"><path d="M52 124 H36"/><path d="M52 132 L38 138"/><path d="M188 124 H204"/><path d="M188 132 L202 138"/></g>
+  <!-- tiny sparkles -->
+  <g fill="#ffe29a"><path d="M24 50 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/><path d="M212 36 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z"/></g>
+</svg>
