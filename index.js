@@ -11,7 +11,7 @@ const app = express();
 app.disable('x-powered-by');
 app.use(express.json({ limit: cfg.MAX_CODE_KB + 'kb' }));
 app.use((req, res, next) => { res.set('X-Content-Type-Options', 'nosniff'); next(); });
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(__dirname));
 
 // ---------- helpers ----------
 const ALPHA = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
@@ -166,8 +166,13 @@ app.get('/api/rooms/:code/download/:id', (req, res) => {
 });
 
 // ---------- pages ----------
-const page = (req, res) => { res.set('X-Robots-Tag', 'noindex, nofollow'); res.sendFile(path.join(__dirname, '..', 'public', 'index.html')); };
-['/new/code', '/new/file', '/share/:id', '/file/:id', '/room/:code'].forEach(p => app.get(p, page));
+const page = (req, res) => {
+    res.set('X-Robots-Tag', 'noindex, nofollow');
+    res.sendFile(path.join(__dirname, 'index.html'));
+};
+
+['/', '/new/code', '/new/file', '/share/:id', '/file/:id', '/room/:code']
+.forEach(p => app.get(p, page));
 
 app.use('/api', (req, res) => res.status(404).json({ error: 'ไม่พบ API นี้' }));
 app.use((err, req, res, next) => {
